@@ -22,11 +22,13 @@ static NSString*const LOG_TAG = @"Diagnostic_Bluetooth[native]";
 
     diagnostic = [Diagnostic getInstance];
 
+    /* FIXME: Disabled to new ios 13 privacy policy
     self.bluetoothManager = [[CBCentralManager alloc]
                              initWithDelegate:self
                              queue:dispatch_get_main_queue()
                              options:@{CBCentralManagerOptionShowPowerAlertKey: @(NO)}];
     [self centralManagerDidUpdateState:self.bluetoothManager]; // Show initial state
+    */
 }
 
 /********************************/
